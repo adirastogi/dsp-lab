@@ -1,0 +1,13 @@
+a=[1 1 5 1 2];
+N=6;
+c=fft(a,N);
+d=length(c);
+x=0:d-1;
+subplot(2,2,1);
+stem(x,c);
+title('N-point DFT');
+b=ifft(c,N);
+y=0:length(b)-1;
+subplot(2,2,2);
+stem(y,b);
+title('N-point IDFT');
